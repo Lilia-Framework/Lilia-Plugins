@@ -1,0 +1,787 @@
+
+
+<html>
+	<head>
+		<title>Lilia Modules Documentation</title>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Lilia Modules Documentation" />
+		<meta property="og:site_name" content="Modules Documentation" />
+
+			<meta property="og:description" content="Documentation and function reference for the Lilia Framework." />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
+		<link rel="stylesheet" href="ldoc.css" />
+		<link rel="stylesheet" href="highlight.css" />
+	</head>
+
+	<body>
+		<main>
+
+<nav>
+	<header>
+		<input id="search" type="search" autocomplete="off" placeholder="Search..." />
+	</header>
+
+	<section>
+				<details class="category" open>
+					<summary>
+						<h2>Libraries</h2>
+					</summary>
+
+					<ul>
+							<li>
+									<details >
+									<summary><a href="libraries/lia.voice/">lia.voice</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="libraries/lia.voice/#defineClass">
+defineClass											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="libraries/lia.voice/#getClass">
+getClass											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="libraries/lia.voice/#getVoiceList">
+getVoiceList											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="libraries/lia.voice/#register">
+register											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+					</ul>
+				</details>
+				<details class="category" open>
+					<summary>
+						<h2>Hooks</h2>
+					</summary>
+
+					<ul>
+							<li>
+									<details >
+									<summary><a href="hooks/afkmanager/">AFKManager</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm  client
+ This function stops the AFK warning system by clearing alpha-related values and removing the hook
+ that draws the warning on the HUD."></span>
+											<a href="hooks/afkmanager/#DisableWarning">
+DisableWarning											</a>
+										</li>
+										<li>
+											<span class="realm  client
+ This function starts the AFK warning system by setting the initial alpha value, recording the start time,
+ playing a sound, and adding a hook to draw the warning on the HUD."></span>
+											<a href="hooks/afkmanager/#EnableWarning">
+EnableWarning											</a>
+										</li>
+										<li>
+											<span class="realm server
+ This function sends a network message to the player to remove the AFK warning and sets their `HasWarning` flag to false."></span>
+											<a href="hooks/afkmanager/#RemoveWarningclient">
+RemoveWarningclient											</a>
+										</li>
+										<li>
+											<span class="realm server
+ This function sends a network message to the player to notify them of an AFK warning and sets their `HasWarning` flag to true."></span>
+											<a href="hooks/afkmanager/#WarnPlayer">
+WarnPlayer											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="hooks/donator/">Donator</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="hooks/donator/#AddOverrideCharSlots">
+AddOverrideCharSlots											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="hooks/donator/#OverrideCharSlots">
+OverrideCharSlots											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="hooks/donator/#SubtractOverrideCharSlots">
+SubtractOverrideCharSlots											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="hooks/donator/#getOverrideChars">
+getOverrideChars											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="hooks/donator/#getRankChars">
+getRankChars											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="hooks/loyalism/">Loyalism</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="hooks/loyalism/#UpdatePartyTiers">
+UpdatePartyTiers											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="hooks/notes/">Notes</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="hooks/notes/#PlayerCanUseLock">
+PlayerCanUseLock											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="hooks/notes/">Notes</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="hooks/notes/#OnNoteSpawned">
+OnNoteSpawned											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="hooks/radio/">Radio</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="hooks/radio/#ShouldRadioBeep">
+ShouldRadioBeep											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="hooks/scanner/">Scanner</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="hooks/scanner/#CanPlayerReceiveScan">
+CanPlayerReceiveScan											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="hooks/shootlock/">ShootLock</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="hooks/shootlock/#CanPlayerBustLock">
+CanPlayerBustLock											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+					</ul>
+				</details>
+				<details class="category" open>
+					<summary>
+						<h2>Entity Meta</h2>
+					</summary>
+
+					<ul>
+							<li>
+									<details >
+									<summary><a href="entity meta/crafting/">Crafting</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="entity meta/crafting/#IsTableLocked">
+IsTableLocked											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="entity meta/crafting/#LockTable">
+LockTable											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+					</ul>
+				</details>
+				<details class="category" open>
+					<summary>
+						<h2>Player Meta</h2>
+					</summary>
+
+					<ul>
+							<li>
+									<details >
+									<summary><a href="player meta/alcoholism/">Alcoholism</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="player meta/alcoholism/#AddBAC">
+AddBAC											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="player meta/alcoholism/#GetBAC">
+GetBAC											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="player meta/alcoholism/#IsDrunk">
+IsDrunk											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="player meta/alcoholism/#ResetBAC">
+ResetBAC											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="player meta/crafting/">Crafting</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="player meta/crafting/#CanCraft">
+CanCraft											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="player meta/donator/">Donator</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="player meta/donator/#GetAdditionalCharSlots">
+GetAdditionalCharSlots											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="player meta/donator/#GiveAdditionalCharSlots">
+GiveAdditionalCharSlots											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="player meta/donator/#SetAdditionalCharSlots">
+SetAdditionalCharSlots											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="player meta/tying/">Tying</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm server"></span>
+											<a href="player meta/tying/#EndHandcuffAnim">
+EndHandcuffAnim											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="player meta/tying/#StartHandcuffAnim">
+StartHandcuffAnim											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="player meta/warrant/">Warrant</a></summary>
+
+									<ul>
+
+
+										<li>
+											<span class="realm shared"></span>
+											<a href="player meta/warrant/#CanSeeWarrants">
+CanSeeWarrants											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="player meta/warrant/#CanSeeWarrantsIssued">
+CanSeeWarrantsIssued											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="player meta/warrant/#CanWarrantPlayers">
+CanWarrantPlayers											</a>
+										</li>
+										<li>
+											<span class="realm shared"></span>
+											<a href="player meta/warrant/#IsWanted">
+IsWanted											</a>
+										</li>
+										<li>
+											<span class="realm server"></span>
+											<a href="player meta/warrant/#ToggleWanted">
+ToggleWanted											</a>
+										</li>
+
+									</ul>
+									</details>
+							</li>
+					</ul>
+				</details>
+				<details class="category" open>
+					<summary>
+						<h2>Configurations</h2>
+					</summary>
+
+					<ul>
+							<li>
+									<details >
+									<summary><a href="configurations/afkmanager/">AFKManager</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/advert/">Advert</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/alcoholism/">Alcoholism</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/antierp/">AntiERP</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/attributefog/">AttributeFog</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/characterwarns/">CharacterWarns</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/communitycommands/">CommunityCommands</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/cursor/">Cursor</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/developmentserver/">DevelopmentServer</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/donationbundle/">DonationBundle</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/doorkick/">DoorKick</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/downtimenotifier/">DownTimeNotifier</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/enhanceddeath/">EnhancedDeath</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/flashlight/">Flashlight</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/freelook/">FreeLook</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/loyalism/">Loyalism</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/mapcleaner/">MapCleaner</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/npcspawner/">NPCSpawner</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/notes/">Notes</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/radio/">Radio</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/randomnamegenerator/">RandomNameGenerator</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/realisticview/">RealisticView</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/rumour/">Rumour</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/scanner/">Scanner</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/wartable/">WarTable</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/warrant/">Warrant</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/whitelist/">Whitelist</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+							<li>
+									<details >
+									<summary><a href="configurations/workshopdownloader/">WorkshopDownloader</a></summary>
+
+									<ul>
+
+
+
+									</ul>
+									</details>
+							</li>
+					</ul>
+				</details>
+	</section>
+</nav>
+
+			<article>
+					<div class="landing">
+    <h1>Modules Documentation</h1>
+</div>
+
+<div class="wrapper">
+    <p style="text-align: center;">Welcome to the documentation for Lilia Modules.</p>
+    <p>This documentation serves as a guide for utilizing the free modules provided by the Lilia Framework. These modules can be used as examples or free content to enhance your server development. They offer essential functionalities that can be expanded upon to create custom gameplay experiences.</p>
+    <p>To utilize these modules, ensure you have the <a href="https://github.com/LiliaFramework/Lilia" target="_blank">Lilia Framework</a> installed.</p>
+
+    <h2>Developers</h2>
+    <p>The sidebar displays the entire contents of the documentation for these modules. They are all searchable using the search box at the top of the sidebar.</p>
+
+    <h2>Server Owners</h2>
+    <p>If you're looking to get your server up and running as soon as possible, check out the <a href="https://liliaframework.github.io/manual/info_installation/" target="_blank">Installation Tutorial</a> guide in the manual. Remember that these modules are dependent on the <a href="https://github.com/LiliaFramework/Lilia" target="_blank">Lilia Framework</a>.</p>
+
+	<h2>Wikis</h2>
+	<p>Explore the various schemas available for Lilia:</p>
+	<ul>
+		<li><a href="https://github.com/LiliaFramework/Lilia" target="_blank">Framework</a></li>
+
+		<li><a href="https://github.com/LiliaFramework/Skeleton" target="_blank">Skeleton Schema</a></li>
+
+		<li><a href="https://github.com/LiliaFramework/MafiaRP" target="_blank">MafiaRP Schema</a></li>
+
+		<li><a href="https://github.com/LiliaFramework/1942RP" target="_blank">1942RP Schema</a></li>
+
+		<li><a href="https://github.com/LiliaFramework/HL2RP" target="_blank">HL2RP Schema</a></li>
+
+		<li><a href="https://github.com/LiliaFramework/MetroRP" target="_blank">MetroRP Schema</a></li>
+
+		<li><a href="https://github.com/LiliaFramework/SCPRP" target="_blank">SCPRP Schema</a></li>
+
+		<li><a href="https://github.com/LiliaFramework/KaiserReichRP" target="_blank">KaiserReichRP Schema</a></li>
+
+		<li><a href="https://github.com/LiliaFramework/FalloutRP" target="_blank">FalloutRP Schema</a></li>
+
+		<li><a href="https://github.com/LiliaFramework/Modules" target="_blank">Public Modules</a></li>
+	</ul>
+    </div>
+			</article>
+		</main>
+
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="highlight.min.js"></script>
+		<script type="text/javascript">
+			var elements = document.querySelectorAll("pre code")
+
+			hljs.configure({
+				languages: ["lua"]
+			});
+
+			for (var i = 0; i < elements.length; i++)
+			{
+				hljs.highlightBlock(elements[i]);
+			}
+		</script>
+	</body>
+</html>
