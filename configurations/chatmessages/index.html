@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>Scanner - Lilia Modules Documentation</title>
+		<title>ChatMessages - Lilia Modules Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Scanner - Lilia Modules Documentation" />
+		<meta property="og:title" content="ChatMessages - Lilia Modules Documentation" />
 		<meta property="og:site_name" content="Modules Documentation" />
 
-			<meta property="og:description" content="Hook Documentation for Scanner Module." />
+			<meta property="og:description" content="Configuration for Chat Messages Module." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -208,7 +208,7 @@ ShouldRadioBeep											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../hooks/scanner/">Scanner</a></summary>
 
 									<ul>
@@ -481,7 +481,7 @@ ToggleWanted											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../configurations/chatmessages/">ChatMessages</a></summary>
 
 									<ul>
@@ -679,7 +679,7 @@ ToggleWanted											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../configurations/scanner/">Scanner</a></summary>
 
 									<ul>
@@ -741,50 +741,59 @@ ToggleWanted											</a>
 			<article>
 					<div class="wrapper">
 						<header class="module">
-	<h1>Scanner</h1>
-	<h2>Hook Documentation for Scanner Module.</h2>
+	<h1>ChatMessages</h1>
+	<h2>Configuration for Chat Messages Module.</h2>
 </header>
 
 <p>
 
 </p>
 
-	<h1 class="title">Functions</h1>
+	<h1 class="title">Tables</h1>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="CanPlayerReceiveScan">
-					<h1><span class="realm server"></span></span>MODULE:CanPlayerReceiveScan(client, sender)</h1>
+				<a class="anchor" id="Configuration">
+					<h1><span class="realm shared"></span></span>Configuration</h1>
 				</a>
 
-					<p>Called to determine if a player can receive scan data from another player.</p>
+					<p>This table defines the default settings for the Chat Messages Module.</p>
 			</header>
 
 
-					<h3>Parameters</h3>
+					<h3>Fields</h3>
 
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">client</span>
-
-									<span class="tag"><span class="type">Player</span></span>
+								<span class="tag parameter">CommunityName</span>
 
 
-								<p> Player The player who is being checked to see if they can receive the scan data.</p>
+
+								<p> Name of the community or server | <strong>string</strong></p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">sender</span>
-
-									<span class="tag"><span class="type">Player</span></span>
+								<span class="tag parameter">ChatMessagesInterval</span>
 
 
-								<p> Player The player who is sending the scan data.</p>
+
+								<p> Specifies the interval in seconds between chat messages | <strong>number</strong></p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">ChatMessages</span>
+
+
+
+								<p> List of messages that are sent in the chat | <strong>table</strong></p>
 							</li>
 					</ul>
 
