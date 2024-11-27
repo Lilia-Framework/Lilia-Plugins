@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>Crafting - Lilia Modules Documentation</title>
+		<title>ModelTweaker - Lilia Modules Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Crafting - Lilia Modules Documentation" />
+		<meta property="og:title" content="ModelTweaker - Lilia Modules Documentation" />
 		<meta property="og:site_name" content="Modules Documentation" />
 
-			<meta property="og:description" content="Meta Tables for Crafting." />
+			<meta property="og:description" content="Configuration for the Model Tweaker Module." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -305,7 +305,7 @@ CanPlayerBustLock											</a>
 
 					<ul>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../entity meta/crafting/">Crafting</a></summary>
 
 									<ul>
@@ -365,7 +365,7 @@ ResetBAC											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../player meta/crafting/">Crafting</a></summary>
 
 									<ul>
@@ -681,7 +681,7 @@ ToggleWanted											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../configurations/modeltweaker/">ModelTweaker</a></summary>
 
 									<ul>
@@ -809,76 +809,51 @@ ToggleWanted											</a>
 			<article>
 					<div class="wrapper">
 						<header class="module">
-	<h1>Crafting</h1>
-	<h2>Meta Tables for Crafting.</h2>
+	<h1>ModelTweaker</h1>
+	<h2>Configuration for the Model Tweaker Module.</h2>
 </header>
 
 <p>
 
 </p>
 
-	<h1 class="title">Functions</h1>
+	<h1 class="title">Tables</h1>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="IsTableLocked">
-					<h1><span class="realm shared"></span></span>entityMeta:IsTableLocked()</h1>
+				<a class="anchor" id="Configuration">
+					<h1><span class="realm shared"></span></span>Configuration</h1>
 				</a>
 
-					<p>Checks if a crafting table is locked.</p>
+					<p>This table defines the default settings for the Model Tweaker Module.</p>
 			</header>
 
 
-
-				<h3>Returns</h3>
-				<ul>
-
-							<li>
-									<span class="type">bool</span>
-
-								<p>True if the table is locked, false otherwise.</p>
-							</li>
-
-				</ul>
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="LockTable">
-					<h1><span class="realm server"></span></span>entityMeta:LockTable(locked)</h1>
-				</a>
-
-					<p>Locks or unlocks a crafting table.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
+					<h3>Fields</h3>
 
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">locked</span>
-
-									<span class="tag"><span class="type">Boolean</span></span>
+								<span class="tag parameter">WardrobeModel</span>
 
 
-								<p> Whether the table should be locked or unlocked.</p>
+
+								<p> The model used for the Model Wardrobe entity. | <strong>string</strong></p>
 							</li>
 					</ul>
 
-
-				<h3>Returns</h3>
-				<ul>
+					<ul>
 
 							<li>
-									<span class="type">bool</span>
+								<span class="tag parameter">ModelList</span>
 
-								<p>True if the operation was successful, false otherwise.</p>
+
+
+								<p> The list of available player models per faction. | <strong>table</strong></p>
 							</li>
+					</ul>
 
-				</ul>
 
 
 		</section>
