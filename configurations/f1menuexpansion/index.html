@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>Warrant - Lilia Modules Documentation</title>
+		<title>F1MenuExpansion - Lilia Modules Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Warrant - Lilia Modules Documentation" />
+		<meta property="og:title" content="F1MenuExpansion - Lilia Modules Documentation" />
 		<meta property="og:site_name" content="Modules Documentation" />
 
-			<meta property="og:description" content="Configuration for the Warrant Module." />
+			<meta property="og:description" content="Configuration for the F1 Menu Expansions Module." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -428,7 +428,7 @@ StartHandcuffAnim											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../player meta/warrant/">Warrant</a></summary>
 
 									<ul>
@@ -637,7 +637,7 @@ ToggleWanted											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../configurations/f1menuexpansion/">F1MenuExpansion</a></summary>
 
 									<ul>
@@ -780,7 +780,7 @@ ToggleWanted											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../configurations/warrant/">Warrant</a></summary>
 
 									<ul>
@@ -820,8 +820,8 @@ ToggleWanted											</a>
 			<article>
 					<div class="wrapper">
 						<header class="module">
-	<h1>Warrant</h1>
-	<h2>Configuration for the Warrant Module.</h2>
+	<h1>F1MenuExpansion</h1>
+	<h2>Configuration for the F1 Menu Expansions Module.</h2>
 </header>
 
 <p>
@@ -836,7 +836,7 @@ ToggleWanted											</a>
 					<h1><span class="realm shared"></span></span>Configuration</h1>
 				</a>
 
-					<p>This table defines the default settings for the Warrant Module.</p>
+					<p>This table defines the default settings for the F1 Menu Expansions Module.</p>
 			</header>
 
 
@@ -846,33 +846,55 @@ ToggleWanted											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">RemoveWarrantOnDeath</span>
+								<span class="tag parameter">RulesEnabled</span>
 
 
 
-								<p> Indicates whether warrants are removed upon death. | <strong>boolean</strong></p>
+								<p> Should DownTime be Enabled | <strong>bool</strong></p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">CanSeeWarrants</span>
+								<span class="tag parameter">TutorialEnabled</span>
 
 
 
-								<p> The privilege required to see warrants. | <strong>table</strong></p>
+								<p> Should DownTime be Enabled | <strong>bool</strong></p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">CanSeeWarrantsNotifications</span>
+								<span class="tag parameter">FAQEnabled</span>
 
 
 
-								<p> The privilege required to receive warrant notifications. | <strong>table</strong></p>
+								<p> Should DownTime be Enabled | <strong>bool</strong></p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">FAQQuestions</span>
+
+
+
+								<p> Frequently Asked Questions | <strong>table</strong></p>
+							</li>
+					</ul>
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">RulesConfig</span>
+
+
+
+								<p> Rules configuration for the server | <strong>table</strong></p>
 							</li>
 					</ul>
 
