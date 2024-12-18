@@ -2,13 +2,13 @@
 
 <html>
 	<head>
-		<title>lia.voice - Lilia Modules Documentation</title>
+		<title>Utilities - Lilia Modules Documentation</title>
 
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="lia.voice - Lilia Modules Documentation" />
+		<meta property="og:title" content="Utilities - Lilia Modules Documentation" />
 		<meta property="og:site_name" content="Modules Documentation" />
 
-			<meta property="og:description" content="Helper library for managing voice lines." />
+			<meta property="og:description" content="A collection of utility functions for entities." />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
 		<link rel="stylesheet" href="../../ldoc.css" />
@@ -89,7 +89,7 @@ spawnProp											</a>
 									</details>
 							</li>
 							<li>
-									<details open>
+									<details >
 									<summary><a href="../../libraries/lia.voice/">lia.voice</a></summary>
 
 									<ul>
@@ -225,8 +225,8 @@ UpdatePartyTiers											</a>
 
 										<li>
 											<span class="realm server"></span>
-											<a href="../../hooks/notes/#PlayerCanUseLock">
-PlayerCanUseLock											</a>
+											<a href="../../hooks/notes/#OnNoteSpawned">
+OnNoteSpawned											</a>
 										</li>
 
 									</ul>
@@ -241,8 +241,8 @@ PlayerCanUseLock											</a>
 
 										<li>
 											<span class="realm server"></span>
-											<a href="../../hooks/notes/#OnNoteSpawned">
-OnNoteSpawned											</a>
+											<a href="../../hooks/notes/#PlayerCanUseLock">
+PlayerCanUseLock											</a>
 										</li>
 
 									</ul>
@@ -326,7 +326,7 @@ LockTable											</a>
 									</details>
 							</li>
 							<li>
-									<details >
+									<details open>
 									<summary><a href="../../entity meta/utilities/">Utilities</a></summary>
 
 									<ul>
@@ -856,8 +856,8 @@ ToggleWanted											</a>
 			<article>
 					<div class="wrapper">
 						<header class="module">
-	<h1>lia.voice</h1>
-	<h2>Helper library for managing voice lines.</h2>
+	<h1>Utilities</h1>
+	<h2>A collection of utility functions for entities.</h2>
 </header>
 
 <p>
@@ -868,11 +868,12 @@ ToggleWanted											</a>
 
 		<section class="method">
 			<header>
-				<a class="anchor" id="defineClass">
-					<h1><span class="realm shared"></span></span>defineClass(class, onCheck, onModify, global)</h1>
+				<a class="anchor" id="canSeeEntity">
+					<h1><span class="realm shared"></span></span>entityMeta:canSeeEntity(entity, fov)</h1>
 				</a>
 
-					<p>Defines a voice class with specific callbacks.</p>
+					<p>Checks if the entity can see another entity.
+ Combines validity, line of sight, and field of view checks.</p>
 			</header>
 
 
@@ -882,76 +883,24 @@ ToggleWanted											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">class</span>
+								<span class="tag parameter">entity</span>
 
-									<span class="tag"><span class="type">String</span></span>
+									<span class="tag"><span class="type">Entity</span></span>
 
 
-								<p> The class identifier.</p>
+								<p> The entity to check visibility against.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">onCheck</span>
+								<span class="tag parameter">fov</span>
 
-									<span class="tag"><span class="type">Function</span></span>
-
-
-								<p> Callback to determine if the client belongs to this class.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">onModify</span>
-
-									<span class="tag"><span class="type">Function</span></span>
+									<span class="tag"><span class="type">Float</span></span>
 
 
-								<p> Callback to modify voice sounds based on the class.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">global</span>
-
-									<span class="tag"><span class="type">Boolean</span></span>
-
-
-								<p> Whether the class applies globally.</p>
-							</li>
-					</ul>
-
-
-
-		</section>
-		<section class="method">
-			<header>
-				<a class="anchor" id="getClass">
-					<h1><span class="realm shared"></span></span>getClass(client)</h1>
-				</a>
-
-					<p>Retrieves definitions of voice classes applicable to a client.</p>
-			</header>
-
-
-					<h3>Parameters</h3>
-
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">client</span>
-
-									<span class="tag"><span class="type">Player</span></span>
-
-
-								<p> The client to check.</p>
+								<p> Optional field of view angle in degrees.</p>
 							</li>
 					</ul>
 
@@ -960,22 +909,29 @@ ToggleWanted											</a>
 				<ul>
 
 							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a>
+									<span class="type">Boolean</span>
 
-								<p>An array of class definitions.</p>
+								<p>True if the entity can see the target entity, false otherwise.</p>
 							</li>
 
 				</ul>
 
+				<h3>Example Usage</h3>
+					<pre><code>if entity:canSeeEntity(targetEntity) then
+    print("Entity can see the target entity.")
+else
+    print("Entity cannot see the target entity.")
+end
+</code></pre>
 
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="getVoiceList">
-					<h1><span class="realm shared"></span></span>getVoiceList(class, text, delay)</h1>
+				<a class="anchor" id="getViewAngle">
+					<h1><span class="realm shared"></span></span>entityMeta:getViewAngle(pos)</h1>
 				</a>
 
-					<p>Retrieves voice line replacements for a specific class and text.</p>
+					<p>Gets the view angle between the entity and a specified position.</p>
 			</header>
 
 
@@ -985,36 +941,12 @@ ToggleWanted											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">class</span>
+								<span class="tag parameter">pos</span>
 
-									<span class="tag"><span class="type">String</span></span>
-
-
-								<p> The voice class identifier.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">text</span>
-
-									<span class="tag"><span class="type">String</span></span>
+									<span class="tag"><span class="type">Vector</span></span>
 
 
-								<p> The text to match for replacements.</p>
-							</li>
-					</ul>
-
-					<ul>
-
-							<li>
-								<span class="tag parameter">delay</span>
-
-									<span class="tag"><span class="type">number</span></span>
-
-
-								<p> Optional delay before each replacement.</p>
+								<p> The position to calculate the view angle towards.</p>
 							</li>
 					</ul>
 
@@ -1023,28 +955,26 @@ ToggleWanted											</a>
 				<ul>
 
 							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.5">table</a> or <span class="type">nil</span>
+									<span class="type">float</span>
 
-								<p>An array of replacements or nil if none found.</p>
-							</li>
-
-							<li>
-									<a class="type" href="https://www.lua.org/manual/5.2/manual.html#6.4">string</a> or <span class="type">nil</span>
-
-								<p>The modified text after replacements or nil if none found.</p>
+								<p>The view angle in degrees.</p>
 							</li>
 
 				</ul>
 
+				<h3>Example Usage</h3>
+					<pre><code>local angle = entity:getViewAngle(targetPos)
+print("View angle:", angle)
+</code></pre>
 
 		</section>
 		<section class="method">
 			<header>
-				<a class="anchor" id="register">
-					<h1><span class="realm shared"></span></span>register(class, key, replacement, source)</h1>
+				<a class="anchor" id="inFov">
+					<h1><span class="realm shared"></span></span>entityMeta:inFov(entity, fov)</h1>
 				</a>
 
-					<p>Registers a voice line replacement for a specific class and key.</p>
+					<p>Checks if the entity is within the field of view of another entity.</p>
 			</header>
 
 
@@ -1054,51 +984,158 @@ ToggleWanted											</a>
 					<ul>
 
 							<li>
-								<span class="tag parameter">class</span>
+								<span class="tag parameter">entity</span>
 
-									<span class="tag"><span class="type">String</span></span>
+									<span class="tag"><span class="type">Entity</span></span>
 
 
-								<p> The voice class identifier.</p>
+								<p> to check the field of view against.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">key</span>
+								<span class="tag parameter">fov</span>
 
-									<span class="tag"><span class="type">String</span></span>
+									<span class="tag"><span class="type">Float</span></span>
 
 
-								<p> The key for the voice line.</p>
+								<p> The field of view angle in degrees.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">Boolean</span>
+
+								<p>True if the entity is within the field of view, false otherwise.</p>
+							</li>
+
+				</ul>
+
+				<h3>Example Usage</h3>
+					<pre><code>if entity:inFov(playerEntity, 90) then
+    print("Entity is within the player's field of view.")
+end
+</code></pre>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="isInRoom">
+					<h1><span class="realm shared"></span></span>entityMeta:isInRoom(target)</h1>
+				</a>
+
+					<p>Checks if the entity is inside a room (i.e., not blocked by world geometry) with another target entity.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">target</span>
+
+									<span class="tag"><span class="type">Entity</span></span>
+
+
+								<p> The target entity to check for room visibility.</p>
+							</li>
+					</ul>
+
+
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">Boolean</span>
+
+								<p>True if the entity is in the same room as the target entity, false otherwise.</p>
+							</li>
+
+				</ul>
+
+				<h3>Example Usage</h3>
+					<pre><code>if entity:isInRoom(targetEntity) then
+    print("Entities are in the same room.")
+else
+    print("Entities are not in the same room.")
+end
+</code></pre>
+
+		</section>
+		<section class="method">
+			<header>
+				<a class="anchor" id="isScreenVisible">
+					<h1><span class="realm shared"></span></span>entityMeta:isScreenVisible(entity, maxDist, fov)</h1>
+				</a>
+
+					<p>Checks if the entity has a clear line of sight to another entity and is within a specified distance and field of view angle.</p>
+			</header>
+
+
+					<h3>Parameters</h3>
+
+
+					<ul>
+
+							<li>
+								<span class="tag parameter">entity</span>
+
+									<span class="tag"><span class="type">Entity</span></span>
+
+
+								<p> The entity to check visibility against.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">replacement</span>
+								<span class="tag parameter">maxDist</span>
 
-									<span class="tag"><span class="type">String</span></span>
+									<span class="tag"><span class="type">Float</span></span>
 
 
-								<p> The replacement text or sound file.</p>
+								<p> The maximum distance squared within which the entity can see the other entity.</p>
 							</li>
 					</ul>
 
 					<ul>
 
 							<li>
-								<span class="tag parameter">source</span>
+								<span class="tag parameter">fov</span>
+
+									<span class="tag"><span class="type">Float</span></span>
 
 
-
-								<p> The source of the replacement (can be a string or table of strings).</p>
+								<p> The field of view angle in degrees.</p>
 							</li>
 					</ul>
 
 
+				<h3>Returns</h3>
+				<ul>
+
+							<li>
+									<span class="type">Boolean</span>
+
+								<p>True if the entity has a clear line of sight to the other entity within the specified distance and field of view angle, false otherwise.</p>
+							</li>
+
+				</ul>
+
+				<h3>Example Usage</h3>
+					<pre><code>if entity:isScreenVisible(targetEntity, 300000, 90) then
+    print("Entity is visible on the screen.")
+end
+</code></pre>
 
 		</section>
 
